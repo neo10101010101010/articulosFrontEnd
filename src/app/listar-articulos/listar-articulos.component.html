@@ -1,0 +1,24 @@
+<h2>Lista de articulos</h2>
+<table class="table table-striped"> 
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Medida</th>
+            <th>Clave</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let articulo of articulos">
+            <td>{{articulo.nombre}}</td>
+            <td>{{articulo.medida}}</td>
+            <td>{{articulo.clave}}</td>
+            <td>{{articulo.precio}}</td>
+            <td>
+                <button (click)= "editarArticulo(articulo.id)" class="btn btn-info">Editar</button>
+                <button (click)= "eliminarArticulo(articulo.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
